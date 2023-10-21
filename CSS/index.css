@@ -49,7 +49,7 @@ main{
     display: flex;
 }
 
-#imagen_1{
+.imagen_1{
     position: relative;
     margin: 20px;
     margin-top: 100PX;
@@ -59,21 +59,40 @@ main{
     height: 400px;
 }
 
+.papa{
+    position: relative;
+    margin: 20px;
+    margin-top: 100PX;
+    left: 200px;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 400px;
+}
+
+
+
 .imagenes_abajo{
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     left: 220px;
     width: 500px;
     height: 100px;
-    background-color: red;
 }
 
 #imagenes_abajo{
     position: relative;
-    width: 100px;
-    height: 100px;
-    margin-left: 20px ;
+    width: 70px;
+    height: 70px;
+    margin: 20px ;
     background-color: aqua;
+
+    transition: .3s ease-out;
+}
+
+#imagenes_abajo:hover{
+    background-color: red;
 }
 
 .texto{
