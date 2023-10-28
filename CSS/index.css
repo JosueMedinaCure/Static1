@@ -11,11 +11,20 @@ body{
 }
 
 header{
+    position: fixed;
     display: flex;
+    top: 0%;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 70px;
     background-color: blueviolet;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
 }
 
 .imagen_arriva{
@@ -40,7 +49,7 @@ nav a{
 
 nav a:hover{
     transition: .3s;
-    background-color: rgba(0, 255, 255, 0.452);
+    background-color: rgba(98, 62, 182, 0.452);
     border-radius: 5px;
 }
 
@@ -54,19 +63,27 @@ main{
     margin: 20px;
     margin-top: 100PX;
     left: 200px;
-    background-color: red;
+    background-color: rgb(109, 50, 50);
     width: 500px;
     height: 400px;
+    transition: .3s;
+    cursor: pointer;
 }
 
 .papa{
     position: relative;
     margin: 20px;
-    margin-top: 100PX;
+    margin-top: 150PX;
+    height: 400px;
     left: 200px;
     background-color: rgb(255, 255, 255);
     width: 500px;
-    height: 400px;
+    transition: .3s;
+    cursor: pointer;
+}
+.papa:hover{
+    background-color: rgb(214, 214, 214);
+    transform: scale(1.03);
 }
 
 
@@ -81,14 +98,44 @@ main{
     height: 100px;
 }
 
-#imagenes_abajo{
+.imagenes_abajo :nth-child(1){
     position: relative;
     width: 70px;
     height: 70px;
     margin: 20px ;
     background-color: aqua;
-
     transition: .3s ease-out;
+    cursor: pointer;
+}
+
+.imagenes_abajo :nth-child(2){
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 20px ;
+    background-color: red;
+    transition: .3s ease-out;
+    cursor: pointer;
+}
+
+.imagenes_abajo :nth-child(3){
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 20px ;
+    background-color: indigo;
+    transition: .3s ease-out;
+    cursor: pointer;
+}
+
+.imagenes_abajo :nth-child(4){
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 20px ;
+    background-color: burlywood;
+    transition: .3s ease-out;
+    cursor: pointer;
 }
 
 #imagenes_abajo:hover{
@@ -97,8 +144,8 @@ main{
 
 .texto{
     position: relative ;
-    display: flex;
-    margin-top: 130px;
+    display: '';
+    margin-top: 180px;
     margin-left: 20px;
     left: 300px;
     padding: 10px;
@@ -106,5 +153,61 @@ main{
     height: 300px;
     border-radius: 15px;
     background-color: white;
-    align-items: center;
+    overflow: hidden;
+}
+
+
+.container_img_slices{
+    display:  none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(73, 73, 73, 0.548);
+}
+
+
+.imagen_seleccionada{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 550px;
+    background-color: rgb(216, 214, 181);
+    cursor: pointer;
+}
+
+.slices1{
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: aqua;
+    transition: .3s;
+
+}
+
+
+.slices2{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: aqua;
+    transition: .3s;
+}
+
+.slices1:hover, .slices2:hover{
+    background-color: blueviolet;
+    transition: .3s;
+    transform: scale(1.2);
+}
+
+.imagen_seleccionada:hover{
+    background-color: rgb(167, 167, 15);
+    transition: .3s;
 }
