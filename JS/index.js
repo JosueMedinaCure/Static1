@@ -8,7 +8,7 @@ imagenGrande = document.querySelector(".papa");
 
 const texto = document.querySelector(".texto")
 
-texto.addEventListener("mouseover",function(){
+texto.addEventListener("mouseenter",function(){
 
 	texto.setAttribute("contentEditable","true")
 
@@ -17,7 +17,7 @@ texto.addEventListener("mouseover",function(){
 });
 
 
-texto.addEventListener("mouseout",function(){
+texto.addEventListener("mouseleave",function(){
 	
 	texto.setAttribute("contentEditable","false")
 	texto.style.backgroundColor = ""; 
@@ -28,6 +28,7 @@ const imagen_0 = document.querySelector(".papa")
 const imagen_abajo1 = document.getElementById("imagenes_abajo1")
 const imagen_abajo2 = document.getElementById("imagenes_abajo2")
 const imagen_abajo3 = document.getElementById("imagenes_abajo3")
+const imagen_abajo4 = document.getElementById("imagenes_abajo4")
 const imgSelected = document.querySelector(".imagen_seleccionada")
 const slices1 = document.querySelector(".slices1")
 const slices2 = document.querySelector(".slices2")
@@ -47,15 +48,18 @@ window.addEventListener("click", function(event) {
 	
 });
 
-
-
-
-	
-
-	
-
-	
-	//texto.removeAttribute("onmouseover","combiar()")
-	
-
-
+window.addEventListener("click", function(event) {
+	if (event.target === imagen_abajo1){
+		imagen_0.style.backgroundColor = "aqua";
+	}else if(event.target === imagen_abajo2){
+		imagen_0.style.backgroundColor = "red";
+	}
+	else if(event.target === imagen_abajo3){
+		imagen_0.style.backgroundColor = "indigo";
+	}
+	else if(event.target === imagen_abajo4){
+		imagen_0.style.backgroundColor = "darksalmon";
+	}else{
+		return 0;
+	}
+});
