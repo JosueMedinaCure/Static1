@@ -8,22 +8,25 @@ imagenGrande = document.querySelector(".papa");
 
 const texto = document.querySelector(".texto")
 
-texto.addEventListener("mouseenter",function(){
 
-	texto.setAttribute("contentEditable","true")
+const contEditable = ()=> texto.setAttribute("contentEditable","true")
 
-	texto.style.backgroundColor = "yellow"; 
+const backgroundYellow = ()=>	texto.style.backgroundColor = "yellow"; 
 
+texto.addEventListener("mouseover",function(){
+
+	contEditable()
+	backgroundYellow()
 });
 
 
-texto.addEventListener("mouseleave",function(){
+texto.addEventListener("mouseout",function(){
 	
 	texto.setAttribute("contentEditable","false")
 	texto.style.backgroundColor = ""; 
 
 });
-
+let imagenArriva = document.querySelector(".imagen_arriva")
 const imagen_0 = document.querySelector(".papa")
 const imagen_abajo1 = document.getElementById("imagenes_abajo1")
 const imagen_abajo2 = document.getElementById("imagenes_abajo2")
@@ -63,3 +66,40 @@ window.addEventListener("click", function(event) {
 		return 0;
 	}
 });
+
+imagenArriva.addEventListener("click",(event)=>{
+	confirm("Deseas salir del sitio web?")
+	if(confirm("Estas seguro que deseas salir? cuando sales de esta pagina reduce 5 cm de tu pene") === true){
+		window.open("https://excalidraw.com/#room=cfbacb9c770189fe5b95,xOfVbABbgEDzipmTF9frpg")
+	}else{
+		console.log("pono")
+	}
+})
+
+
+
+const  contenedor1 = document.querySelector(".contenedor1")
+const href = document.querySelector(".href")
+const button = document.querySelector(".button")
+
+imagenArriva.addEventListener("before",(event)=>{
+	console.log("te fuiste del sitio")
+});
+
+/* contenedor1.addEventListener("click",(event)=>{
+	alert("contenedor1")
+	event.stopPropagation()
+}); */
+
+
+/*
+	ESTO SIRVE PARA HACER DOBLE AUTENTICACION  AL DIRECCIONAR HACIA OTRA PAGINA 
+href.addEventListener("click",(event)=>{
+	 if(confirm("deseas salir?") ===  true){
+		href.setAttribute('href','https://www.youtube.com/')
+		console.log("realizado")
+	 }else{
+		console.error("micropene")
+	 }
+});
+*/
