@@ -1,31 +1,48 @@
-imagenGrande = document.querySelector(".papa");
+const imagenGrande = document.querySelector(".papa");
 
 //imagenGrande.addEventListener("click", function () {
         
   //      this.classList.toggle('papa');       
-    //    this.classList.toggle('imagen_1');
-//});
-
-const texto = document.querySelector(".texto")
-
-
+  //    this.classList.toggle('imagen_1');
+  //});
+  
+  
+  
 const contEditable = ()=> texto.setAttribute("contentEditable","true")
+const  backgroundYellow = ()=>	texto.style.backgroundColor = "yellow"; 
 
-const backgroundYellow = ()=>	texto.style.backgroundColor = "yellow"; 
-
-texto.addEventListener("mouseover",function(){
-
+/* texto.addEventListener("mouseover",function(){
 	contEditable()
 	backgroundYellow()
 });
-
 
 texto.addEventListener("mouseout",function(){
 	
 	texto.setAttribute("contentEditable","false")
 	texto.style.backgroundColor = ""; 
-
 });
+*/
+const input = document.querySelector(".input")
+const contenedor = document.querySelector(".Contenedor")
+
+
+input.addEventListener("select",(e)=>{
+	/* let start = e.target.selectionStart;
+	let end = e.target.selectionEnd;
+	let textoCompleto = input.value;
+	contenedor.textContent = textoCompleto.substring(start,end);
+	console.log(textoCompleto.substring(start, end)) */
+
+	console.log(e)
+})
+
+
+
+
+
+
+
+
 let imagenArriva = document.querySelector(".imagen_arriva")
 const imagen_0 = document.querySelector(".papa")
 const imagen_abajo1 = document.getElementById("imagenes_abajo1")
@@ -82,15 +99,6 @@ const  contenedor1 = document.querySelector(".contenedor1")
 const href = document.querySelector(".href")
 const button = document.querySelector(".button")
 
-imagenArriva.addEventListener("before",(event)=>{
-	console.log("te fuiste del sitio")
-});
-
-/* contenedor1.addEventListener("click",(event)=>{
-	alert("contenedor1")
-	event.stopPropagation()
-}); */
-
 
 /*
 	ESTO SIRVE PARA HACER DOBLE AUTENTICACION  AL DIRECCIONAR HACIA OTRA PAGINA 
@@ -103,3 +111,25 @@ href.addEventListener("click",(event)=>{
 	 }
 });
 */
+
+
+
+
+let alumnos = [{
+email:"tupito",  			// lo que esta adentro se convierte en alumno
+nombre: "josue",  			// y datos seria lo que seta antes de los dos puntos (:)
+celular:"pobre mental"} 	// lo que se selecciona es el string  
+];
+ 
+
+for (alumno in alumnos){
+let datos = alumnos[alumno]
+let nombre = datos["nombre"]
+let email = datos['email']
+let celular = datos['celular']
+document.write(`A continuacion presentamos los datos  <br>
+estos son: <br>
+-Nombre: <b> ${nombre}</b> <br>
+-email: <b> ${email}</b> <br>
+-celular: <b>${celular}</b> <br><br>`)
+}
