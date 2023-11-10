@@ -1,39 +1,17 @@
-const imagenGrande = document.querySelector(".papa");
-
-//imagenGrande.addEventListener("click", function () {
-        
-  //      this.classList.toggle('papa');       
-  //    this.classList.toggle('imagen_1');
-  //});
-  
-  
-  
+const imagenGrande = document.querySelector(".papa");  
 const contEditable = ()=> texto.setAttribute("contentEditable","true")
 const  backgroundYellow = ()=>	texto.style.backgroundColor = "yellow"; 
 
-/* texto.addEventListener("mouseover",function(){
-	contEditable()
-	backgroundYellow()
-});
-
-texto.addEventListener("mouseout",function(){
-	
-	texto.setAttribute("contentEditable","false")
-	texto.style.backgroundColor = ""; 
-});
-*/
 const input = document.querySelector(".input")
 const contenedor = document.querySelector(".Contenedor")
 
 
 input.addEventListener("select",(e)=>{
-	/* let start = e.target.selectionStart;
+	let start = e.target.selectionStart;
 	let end = e.target.selectionEnd;
 	let textoCompleto = input.value;
 	contenedor.textContent = textoCompleto.substring(start,end);
-	console.log(textoCompleto.substring(start, end)) */
-
-	console.log(e)
+	console.log(textoCompleto.substring(start, end))
 })
 
 
@@ -68,8 +46,8 @@ window.addEventListener("click", function(event) {
 	
 });
 
-window.addEventListener("click", function(event) {
-	if (event.target === imagen_abajo1){
+window.addEventListener("click", function(event) {  // Para cambiar el fondo de la imagen grande al 
+	if (event.target === imagen_abajo1){			// presionar una de las imagenes de abajo
 		imagen_0.style.backgroundColor = "aqua";
 	}else if(event.target === imagen_abajo2){
 		imagen_0.style.backgroundColor = "red";
@@ -83,6 +61,27 @@ window.addEventListener("click", function(event) {
 		return 0;
 	}
 });
+
+/* 
+
+const expr = prompt("elige entre orange, pepino y mango")
+
+switch(expr){
+	case 'oranges':
+		alert("oranges a 24 pavos");
+		break;
+	case 'pepino':
+		alert('te lo metes por todo el chikoreo');
+		break;
+	case 'mango':
+			alert("mango ya no hay")
+		break
+	default:
+		alert("ninguna de las anteriores")
+
+} */
+
+
 
 imagenArriva.addEventListener("click",(event)=>{
 	confirm("Deseas salir del sitio web?")
