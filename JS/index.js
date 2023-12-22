@@ -50,7 +50,7 @@ window.addEventListener("click", function(event) {  // Para cambiar el fondo de 
 	if (event.target === imagen_abajo1){			// presionar una de las imagenes de abajo
 		imagen_0.style.backgroundColor = "aqua";
 	}else if(event.target === imagen_abajo2){
-		imagen_0.style.backgroundColor = "red";
+		imagen_0.style.backgroundColor = "blue";
 	}
 	else if(event.target === imagen_abajo3){
 		imagen_0.style.backgroundColor = "indigo";
